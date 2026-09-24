@@ -3,14 +3,14 @@ import { booking } from '@/data/site'
 import { SectionHeading } from './SectionHeading'
 import { ArrowIcon } from './Icons'
 
-/** Calendly inline-embed URL; embed_domain is only known in the browser. */
-function embedUrl(domain: string) {
+/** Calendly inline-embed URL; embed_domain and the theme are only known in the browser. */
+function embedUrl(domain: string, dark: boolean) {
   const params = new URLSearchParams({
     embed_domain: domain,
     embed_type: 'Inline',
     hide_gdpr_banner: '1',
-    background_color: 'fcfbf8',
-    text_color: '141a26',
+    background_color: dark ? '131823' : 'fcfbf8',
+    text_color: dark ? 'ece9e2' : '141a26',
     primary_color: 'ff5a1f',
   })
   return `${booking.url}?${params.toString()}`
@@ -21,7 +21,12 @@ export function Booking() {
   const [src, setSrc] = useState<string | null>(null)
 
   useEffect(() => {
-    if (hasLink) setSrc(embedUrl(window.location.hostname))
+    if (!hasLink) return
+    const update = () =>
+      setSrc(embedUrl(window.location.hostname, document.documentElement.dataset.theme === 'dark'))
+    update()
+    window.addEventListener('themechange', update)
+    return () => window.removeEventListener('themechange', update)
   }, [hasLink])
 
   return (

@@ -3,7 +3,7 @@ import { ArrowIcon } from './Icons'
 
 function Chip({ children }: { children: React.ReactNode }) {
   return (
-    <span className="absolute bottom-3 left-3 rounded-md bg-ink/90 px-2.5 py-1.5 font-mono text-[0.68rem] tracking-[0.12em] text-white uppercase backdrop-blur">
+    <span className="absolute bottom-3 left-3 rounded-md bg-navy/90 px-2.5 py-1.5 font-mono text-[0.68rem] tracking-[0.12em] text-white uppercase backdrop-blur">
       {children}
     </span>
   )

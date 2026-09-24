@@ -37,9 +37,16 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
+        {/* Apply the saved theme (or the OS preference) before first paint. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();",
+          }}
+        />
         {/* Reveal is JS driven; keep content visible if JS never runs. */}
         <noscript
           dangerouslySetInnerHTML={{

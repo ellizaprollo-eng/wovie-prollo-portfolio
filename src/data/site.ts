@@ -59,6 +59,7 @@ export const navLinks = [
   { label: 'Systems', href: '#systems' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Book a call', href: '#book' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -280,6 +281,31 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Publishing', src: '/projects/auto-article-wordpress.png' },
       { label: 'Payments', src: '/projects/payments-received-tracking-audit.png' },
     ],
+  },
+]
+
+/**
+ * Client testimonials, copied word for word from the previous portfolio.
+ * Only add quotes a client actually gave; never edit their wording.
+ */
+export const testimonials = [
+  {
+    quote:
+      "Working with Wovie has been an absolute relief. He's incredibly reliable, detail-oriented, and always delivers with professionalism and integrity. He adapts quickly to any task, communicates proactively, and consistently proves himself as a trusted, high-performing partner.",
+    name: 'Elor Kahalanay',
+    title: 'Business Owner',
+  },
+  {
+    quote:
+      'Working with Wovie on our property management automation was a game-changer. He set up seamless integrations that handle everything from guest communication to scheduling. Highly recommend!',
+    name: 'John Pancerzewski',
+    title: 'Property Manager',
+  },
+  {
+    quote:
+      "Wovie's attention to detail and deep understanding of automation tools is impressive. He created custom workflows that perfectly fit our business needs. Professional and results-driven.",
+    name: 'Trey Pinkerman',
+    title: 'Funding Business Owner',
   },
 ]
 

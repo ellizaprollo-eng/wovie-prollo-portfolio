@@ -1,5 +1,6 @@
 import { links, navLinks, profile } from '@/data/site'
 import { LinkedInIcon, MailIcon } from './Icons'
+import { ThemeToggle } from './ThemeToggle'
 
 /** Sticky profile card. On small screens it sits above the content, without the nav list. */
 export function Sidebar() {
@@ -63,9 +64,12 @@ export function Sidebar() {
         </a>
       </div>
 
-      <div className="mt-5 hidden space-y-1 border-t border-line pt-4 font-mono text-[0.7rem] leading-relaxed text-muted lg:block">
-        <p>{profile.timezone}</p>
-        <p>{profile.responseTime}</p>
+      <div className="mt-5 hidden items-center justify-between gap-3 border-t border-line pt-4 lg:flex">
+        <div className="space-y-1 font-mono text-[0.7rem] leading-relaxed text-muted">
+          <p>{profile.timezone}</p>
+          <p>{profile.responseTime}</p>
+        </div>
+        <ThemeToggle />
       </div>
     </aside>
   )

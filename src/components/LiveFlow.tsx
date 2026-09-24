@@ -24,7 +24,7 @@ export function LiveFlow() {
   return (
     <figure
       aria-label="Example workflow: a new lead is qualified by an AI agent, gets an instant reply, and is booked on the calendar"
-      className="m-0 rounded-[1.1rem] border border-white/10 bg-ink p-4 sm:p-5"
+      className="m-0 rounded-[1.1rem] border border-white/10 bg-navy p-4 sm:p-5"
     >
       <figcaption className="flex justify-between font-mono text-[0.7rem] tracking-[0.08em] text-mist-dim uppercase">
         <span>Workflow · Lead → Booked</span>
@@ -50,7 +50,7 @@ export function LiveFlow() {
               width={n.w}
               height={n.h}
               rx="12"
-              fill="var(--color-ink-2)"
+              fill="var(--color-navy-2)"
               stroke={n.on ? 'var(--color-signal)' : 'rgb(255 255 255 / 0.14)'}
             />
             <text x={n.x + 16} y={n.y + 22} fill="#fff" fontSize="13" fontWeight="500" fontFamily="var(--font-sans)">
@@ -63,7 +63,7 @@ export function LiveFlow() {
         ))}
 
         <g>
-          <rect x="220" y="272" width="80" height="36" rx="10" fill="var(--color-ink-2)" stroke="rgb(255 255 255 / 0.14)" />
+          <rect x="220" y="272" width="80" height="36" rx="10" fill="var(--color-navy-2)" stroke="rgb(255 255 255 / 0.14)" />
           <text x="232" y="294" fill="var(--color-mist-dim)" fontSize="10" fontFamily="ui-monospace, monospace">
             no reply → d2
           </text>

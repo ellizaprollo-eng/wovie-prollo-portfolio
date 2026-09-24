@@ -5,7 +5,7 @@ import { SectionHeading } from './SectionHeading'
 
 export function CaseStudies() {
   return (
-    <section id="systems" className="rounded-[1.25rem] bg-ink p-4 text-mist sm:p-6 md:p-9">
+    <section id="systems" className="rounded-[1.25rem] bg-navy p-4 text-mist sm:p-6 md:p-9">
       <div className="px-2 pt-2 sm:px-0 sm:pt-0">
         <SectionHeading
           dark
@@ -34,7 +34,7 @@ function CaseCard({ study }: { study: CaseStudy }) {
     { label: 'Result', text: study.result },
   ]
   return (
-    <div className="flex h-full flex-col rounded-xl border border-white/10 bg-ink-2 p-5 md:p-7">
+    <div className="flex h-full flex-col rounded-xl border border-white/10 bg-navy-2 p-5 md:p-7">
       <a
         href={study.screenshots[0].src}
         target="_blank"

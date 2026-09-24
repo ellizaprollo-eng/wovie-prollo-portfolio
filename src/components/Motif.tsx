@@ -58,7 +58,7 @@ export function HeroBackdrop() {
 /** Thin line with three nodes, used between sections. */
 export function FlowDivider({ dark = false }: { dark?: boolean }) {
   const line = dark ? 'bg-white/15' : 'bg-line'
-  const node = dark ? 'border-white/30 bg-ink' : 'border-ink/25 bg-paper'
+  const node = dark ? 'border-white/30 bg-navy' : 'border-ink/25 bg-paper'
   return (
     <div aria-hidden="true" className="container-x">
       <div className="flex items-center">
