@@ -2,6 +2,7 @@ import { profile, tools } from '@/data/site'
 import { HeroBackdrop } from './Motif'
 import { ArrowIcon } from './Icons'
 import { LiveFlow } from './LiveFlow'
+import { ThemeToggle } from './ThemeToggle'
 
 export function Hero() {
   const lines = profile.titleLines
@@ -11,12 +12,17 @@ export function Hero() {
     <section className="panel relative overflow-hidden">
       <HeroBackdrop />
       <div className="relative">
-        <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-center">
+        {/* Top row: label on the left, theme switch on the right (phones use the top bar's switch). */}
+        <div className="flex items-center justify-between gap-4">
+          <p className="flex items-center gap-2.5 font-mono text-[0.78rem] tracking-[0.1em] text-muted uppercase">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-signal shadow-[0_0_0_4px_rgb(255_90_31/0.18)]" />
+            {profile.heroEyebrow}
+          </p>
+          <ThemeToggle className="hidden bg-card lg:grid" />
+        </div>
+
+        <div className="mt-2 grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-center">
           <div className="@container min-w-0">
-            <p className="flex items-center gap-2.5 font-mono text-[0.78rem] tracking-[0.1em] text-muted uppercase">
-              <span className="h-2 w-2 rounded-full bg-signal shadow-[0_0_0_4px_rgb(255_90_31/0.18)]" />
-              {profile.heroEyebrow}
-            </p>
 
             {/* One span per line so the breaks are deliberate; the last line is the accent. */}
             {/* Exactly one line per entry: lines never wrap, and the size is tied to the
