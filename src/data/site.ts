@@ -1,0 +1,269 @@
+/**
+ * All site copy and links live here. Edit this file to change the page;
+ * the components only handle presentation.
+ *
+ * Every claim below is taken from Wovie's resume (public/resume.pdf) or the
+ * previous portfolio's project write-ups. Do not add numbers, clients, or
+ * results that are not documented there.
+ */
+
+export const profile = {
+  name: 'Wovie Prollo',
+  headline: 'Workflow & AI Automation Specialist | GoHighLevel CRM Specialist',
+  positioning:
+    'I build systems that organize leads, automate follow-up, and simplify business operations.',
+  intro:
+    'I set up CRMs, connect the tools a business already uses, and build the workflows and AI agents that handle the repetitive work in between.',
+  location: 'Manila, Philippines',
+  availability: 'Remote, working across time zones',
+  /** Profile photo. Replace the file in /public or point this at a new one. */
+  photo: '/profile.jpg',
+  /**
+   * Optional hero visual. Leave as null to show the built-in workflow
+   * diagram, or set to an image path in /public (e.g. '/hero.png').
+   */
+  heroVisual: null as string | null,
+  resume: '/resume.pdf',
+}
+
+export const links = {
+  linkedin: 'https://www.linkedin.com/in/wovie-prollo-3102a5308/',
+  email: 'wovieprollo42@gmail.com',
+  whatsapp: 'https://wa.me/639063425144',
+  upwork: 'https://www.upwork.com/freelancers/~016098766f2632c3f0',
+}
+
+export const booking = {
+  /** Calendly event link, taken from the previous portfolio's contact page. */
+  url: 'https://calendly.com/wovieprollo42/30min',
+  length: '30-minute',
+}
+
+export const contactForm = {
+  /**
+   * Optional form backend (Formspree, a GoHighLevel inbound webhook, etc.).
+   * When empty, the form opens the visitor's email app with the message
+   * pre-filled and addressed to links.email.
+   */
+  endpoint: '',
+}
+
+export const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Work', href: '#work' },
+  { label: 'Tools', href: '#tools' },
+  { label: 'Contact', href: '#contact' },
+]
+
+/** Sources: resume summary and experience section; certificate images in the old portfolio. */
+export const proofPoints = [
+  {
+    value: '4 years',
+    label: 'Designing and building automations on GoHighLevel, Zapier, Make, and n8n',
+  },
+  {
+    value: '~80%',
+    label: 'Less manual process time, reported across freelance and property-management work',
+  },
+  {
+    value: '22',
+    label: 'Documented workflows and AI agents in my project portfolio',
+  },
+  {
+    value: '6',
+    label: 'Live websites and funnels built for clients',
+  },
+]
+
+export const credentials = [
+  'GoHighLevel CRM Expert badge',
+  'n8n Academy: 4 course certificates',
+]
+
+export const about = {
+  paragraphs: [
+    'Most businesses I work with already have the tools. What they are missing is the system that connects them: leads land in one place, follow-up happens on time, and nobody has to remember the next step.',
+    'I spend most of my time inside GoHighLevel, setting up pipelines, forms, tags, and the workflows that move contacts forward. When a job needs more, I build around it with n8n, Make, Zapier, APIs, and webhooks.',
+    'I also build practical AI systems: chat agents that sort and answer incoming messages, voice agents that qualify callers and book appointments, and agents that turn intake data into structured records and proposals.',
+  ],
+  focus: [
+    'CRM setup',
+    'Workflow automation',
+    'Lead management',
+    'Customer communication',
+    'Practical AI systems',
+  ],
+  experience: [
+    {
+      role: 'Workflow Automation Specialist',
+      org: 'Freelance, Upwork and OnlineJobs.ph',
+      note: 'Current',
+    },
+    {
+      role: 'System Builder / Automation Expert',
+      org: 'Press Haven Homes',
+      note: 'Long-term rental',
+    },
+    {
+      role: 'Automation Specialist',
+      org: 'Stay Classy Homes',
+      note: 'Short-term rental',
+    },
+  ],
+}
+
+export const services = [
+  {
+    title: 'CRM Architecture and GoHighLevel Setup',
+    description:
+      'Pipelines, custom fields, tags, forms, and calendars set up so every contact has a clear place and a clear next step.',
+  },
+  {
+    title: 'Workflow Automation',
+    description:
+      'End-to-end workflows in GoHighLevel, n8n, Make, and Zapier that take repetitive handoffs off your team.',
+  },
+  {
+    title: 'AI Voice and Chat Agents',
+    description:
+      'Retell AI voice agents and OpenAI chat agents that qualify leads, answer routine questions, and book appointments.',
+  },
+  {
+    title: 'Funnels and Websites',
+    description:
+      'Landing pages, funnels, and multi-page sites that feed straight into your CRM and automations.',
+  },
+  {
+    title: 'API and Webhook Integrations',
+    description:
+      'Custom connections between your apps so data moves between systems without copy and paste.',
+  },
+  {
+    title: 'Reporting and Workflow Optimization',
+    description:
+      'Audit trails, tracking sheets, and SOPs, plus tuning existing workflows once real data shows where they stall.',
+  },
+]
+
+export type CaseStudy = {
+  title: string
+  tools: string[]
+  problem: string
+  system: string
+  result: string
+  /** Workflow diagram. Each inner array is one lane of connected steps. */
+  flow: string[][]
+  /** Workflow screenshots in /public/projects. */
+  screenshots: Array<{ label: string; src: string }>
+}
+
+/** Sources: project write-ups from the previous portfolio. Results are qualitative on purpose. */
+export const caseStudies: CaseStudy[] = [
+  {
+    title: 'AI Chat Agent',
+    tools: ['n8n', 'OpenAI', 'Vector store', 'Webhook'],
+    problem:
+      'Every incoming chat message needed a person to read it and decide if it was routine, a booking request, or urgent.',
+    system:
+      'An n8n AI agent with vector-store memory reads each message, classifies it, and routes it through a switch to an automatic reply, the booking flow, or a flagged escalation.',
+    result:
+      'Routine messages get an instant, on-brand reply. Only the ones that need a person reach one.',
+    flow: [['Message in', 'Classify', 'Route', 'Reply or escalate']],
+    screenshots: [{ label: 'Workflow', src: '/projects/ai-chat-agent.png' }],
+  },
+  {
+    title: 'Lead Enrichment Engine',
+    tools: ['n8n', 'AI agent', 'Apollo', 'Apify'],
+    problem:
+      'Building lead lists meant running Apollo searches by hand, exporting results, and scoring each contact manually.',
+    system:
+      'An AI agent turns a plain-language request into an Apollo search. Apify scrapes the results, and each lead is scored on industry, company size, and title before it goes to the outreach tool.',
+    result:
+      'Only scored leads with an email and a website reach the sales team. The manual list-building step is gone.',
+    flow: [['Request', 'Apollo search', 'Apify scrape', 'Score', 'Outreach']],
+    screenshots: [{ label: 'Workflow', src: '/projects/lead-enrichment-engine.png' }],
+  },
+  {
+    title: 'Voice AI Booking and Call Flows',
+    tools: ['Retell AI', 'n8n', 'Calendar'],
+    problem:
+      'Inbound calls needed a consistent greeting and qualification, and booking a call meant someone checking the calendar live.',
+    system:
+      'Retell AI voice agents greet callers, collect business details, and gauge interest. A backend n8n workflow checks real calendar availability and confirms the appointment during the call.',
+    result:
+      'Callers are qualified the same way every time and leave with a confirmed slot from the real calendar.',
+    flow: [['Call', 'Greet + qualify', 'Check calendar', 'Booked']],
+    screenshots: [
+      { label: 'Booking workflow', src: '/projects/voice-inbound-booking-workflow.png' },
+      { label: 'Voice agent', src: '/projects/voice-sara-lead-qualifier.png' },
+    ],
+  },
+  {
+    title: 'Client Onboarding and Proposal Agents',
+    tools: ['n8n', 'AI agent', 'Documents'],
+    problem:
+      'Onboarding meant back-and-forth emails to collect details, then writing each proposal from scratch.',
+    system:
+      'A chat-based agent walks new clients through a structured intake. A second agent pulls that intake data and drafts a formatted proposal for final review.',
+    result:
+      'Each engagement starts with a complete record, and proposals are built from the same data every time.',
+    flow: [['Intake chat', 'Structured record', 'Draft proposal', 'Review']],
+    screenshots: [
+      { label: 'Onboarding agent', src: '/projects/onboarding-agent.png' },
+      { label: 'Proposal agent', src: '/projects/proposal-agent.png' },
+    ],
+  },
+  {
+    title: 'Lead Routing and CRM Intake',
+    tools: ['GoHighLevel', 'Webhook', 'Voice AI'],
+    problem:
+      'Form submissions landed in a shared inbox with no clear owner, so leads waited until someone noticed.',
+    system:
+      'A GoHighLevel workflow tags the contact and opens an opportunity on submit, sends email and SMS, triggers an AI voice call by webhook, then routes the lead by outcome: booked, engaged, or no answer.',
+    result:
+      'Every lead is contacted right away and lands in the right follow-up path.',
+    flow: [['Form submitted', 'Tag + opportunity', 'Email, SMS, call', 'Route by outcome']],
+    screenshots: [{ label: 'Workflow', src: '/projects/form-submission-lead.png' }],
+  },
+  {
+    title: 'Content Publishing and Payment Tracking',
+    tools: ['n8n', 'WordPress', 'GoHighLevel'],
+    problem:
+      'Articles had to be written and posted by hand, and payments were reconciled manually, so mismatches surfaced late.',
+    system:
+      'An n8n workflow generates long-form articles and publishes them to WordPress on a schedule. A GoHighLevel workflow logs each payment, checks it against records, and flags mismatches.',
+    result:
+      'Content goes live on schedule without touching the dashboard, and payment discrepancies are flagged when they happen.',
+    flow: [
+      ['Schedule', 'Write article', 'Publish'],
+      ['Payment', 'Reconcile', 'Flag mismatch'],
+    ],
+    screenshots: [
+      { label: 'Publishing', src: '/projects/auto-article-wordpress.png' },
+      { label: 'Payments', src: '/projects/payments-received-tracking-audit.png' },
+    ],
+  },
+]
+
+/** Sources: resume Technical Skills and Experience sections. */
+export const tools = [
+  'GoHighLevel',
+  'n8n',
+  'Make',
+  'Zapier',
+  'HubSpot',
+  'OpenAI',
+  'Claude',
+  'Retell AI',
+  'APIs',
+  'Webhooks',
+  'Google Sheets',
+  'Airtable',
+  'Monday.com',
+  'Apollo',
+  'Apify',
+  'WordPress',
+  'Google Workspace',
+  'Mailchimp',
+]

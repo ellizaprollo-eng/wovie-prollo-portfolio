@@ -1,0 +1,137 @@
+@import "tailwindcss" source("../src");
+
+@theme {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  /* Calm Systems palette: one warm paper, one ink, one signal accent. */
+  --color-paper: #f7f5f0;
+  --color-paper-2: #efebe3;
+  --color-card: #fcfbf8;
+  --color-ink: #141a26;
+  --color-ink-2: #1c2433;
+  --color-muted: #505869;
+  --color-line: rgb(20 26 38 / 0.12);
+  --color-signal: #ff5a1f;
+  --color-signal-deep: #d9430e;
+  /* Text on the navy section */
+  --color-mist: #c9cfda;
+  --color-mist-dim: #8f98a8;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Buttons: solid, square-ish corners, no gradients. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.btn-primary {
+  background: var(--color-signal);
+  color: var(--color-ink);
+}
+.btn-primary:hover {
+  background: #ff6e3a;
+}
+.btn-ghost {
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--color-ink);
+}
+.btn-node {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: currentColor;
+  box-shadow: 0 0 0 3px rgb(20 26 38 / 0.18);
+}
+
+/* Form fields */
+.field {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  transition: border-color 0.2s ease;
+}
+.field::placeholder {
+  color: #8a909c;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-ink);
+}
+
+/* Scroll reveal: used on two places only (services list, case studies). */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
