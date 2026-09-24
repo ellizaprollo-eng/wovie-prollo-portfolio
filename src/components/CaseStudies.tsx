@@ -48,7 +48,7 @@ function CaseCard({ study }: { study: CaseStudy }) {
           className="aspect-[16/8] w-full object-cover object-top opacity-95"
         />
       </a>
-      <h3 className="font-serif text-2xl leading-tight text-white md:text-[1.75rem]">{study.title}</h3>
+      <h3 className="font-heading text-xl leading-snug text-white md:text-[1.4rem]">{study.title}</h3>
       <p className="mt-2 text-xs tracking-wide text-mist-dim">{study.tools.join(' · ')}</p>
 
       <div className="mt-6 rounded-lg border border-white/10 bg-black/15 p-4">

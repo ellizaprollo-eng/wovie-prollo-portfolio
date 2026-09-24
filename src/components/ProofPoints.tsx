@@ -5,7 +5,7 @@ export function ProofPoints() {
     <section aria-label="Proof points" className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
       {proofPoints.map((p) => (
         <div key={p.label} className="rounded-[1.25rem] border border-line bg-card p-5 md:p-6">
-          <p className="font-serif text-4xl leading-none tracking-tight md:text-5xl">{p.value}</p>
+          <p className="font-heading text-[2rem] leading-none tracking-tight md:text-[2.5rem]">{p.value}</p>
           <p className="mt-3 text-sm leading-snug text-muted">{p.label}</p>
         </div>
       ))}

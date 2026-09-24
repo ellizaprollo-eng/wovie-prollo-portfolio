@@ -11,8 +11,8 @@ export function Hero() {
         <div className="grid gap-8 xl:grid-cols-[1.1fr_1fr] xl:items-center xl:gap-10">
           <div>
             <p className="eyebrow text-muted">{profile.headline}</p>
-            <h1 className="mt-5 max-w-3xl font-serif text-[2.4rem] leading-[1.04] tracking-tight sm:text-5xl xl:text-[3.5rem]">
-              I build systems that organize leads, automate follow-up, and{' '}
+            <h1 className="mt-5 max-w-3xl font-heading text-[2rem] leading-[1.12] tracking-tight sm:text-[2.6rem] xl:text-[2.85rem]">
+              I build systems that organize leads, automate follow&#8209;up, and{' '}
               <em className="text-signal-deep">simplify</em> business operations.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
