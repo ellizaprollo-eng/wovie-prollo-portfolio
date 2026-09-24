@@ -13,13 +13,14 @@ export function Hero() {
       <div className="relative">
         <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-center">
           <div>
-            <p className="eyebrow flex items-center gap-2.5 text-muted">
+            <p className="flex items-center gap-2.5 font-mono text-[0.78rem] tracking-[0.1em] text-muted uppercase">
               <span className="h-2 w-2 rounded-full bg-signal shadow-[0_0_0_4px_rgb(255_90_31/0.18)]" />
               {profile.heroEyebrow}
             </p>
 
             {/* One span per line so the breaks are deliberate; the last line is the accent. */}
-            <h1 className="mt-6 font-heading text-[2.6rem] leading-[1.02] tracking-tight sm:text-[3.25rem] xl:text-[clamp(2.75rem,4.2vw,4rem)]">
+            {/* Size scales with the viewport so the widest line ("AI Automation Builder.") never wraps. */}
+            <h1 className="mt-6 font-heading text-[clamp(1.9rem,9.6vw,3.75rem)] leading-[1.02] tracking-tight xl:text-[clamp(2.75rem,4.2vw,4rem)]">
               {lines.map((line, i) => (
                 <span key={line} className={i === last ? 'block italic text-signal-deep' : 'block'}>
                   {line}
@@ -32,14 +33,16 @@ export function Hero() {
               operations.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#book" className="btn btn-primary">
-                <span className="btn-node" />
-                Book a Call
-              </a>
-              <a href="#work" className="btn btn-ghost bg-card">
-                See selected work
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <a href="#book" className="btn btn-primary rounded-full px-6 py-3.5 text-base">
+                Book a call
                 <ArrowIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="#work"
+                className="text-[0.95rem] text-muted underline decoration-line decoration-1 underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
+              >
+                See the work
               </a>
             </div>
           </div>
