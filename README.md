@@ -18,3 +18,10 @@ npm install
 npm run dev      # http://localhost:3000
 npm run build
 ```
+
+## Resume
+
+`public/resume.pdf` is generated from `resume/resume.html` (same branding and
+facts as the site). To update it, edit the HTML, open it in Chrome, then
+Print > Save as PDF with Paper "Letter", Margins "None", and "Background
+graphics" ticked, and save over `public/resume.pdf`.
