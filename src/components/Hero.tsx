@@ -4,24 +4,32 @@ import { ArrowIcon } from './Icons'
 import { LiveFlow } from './LiveFlow'
 
 export function Hero() {
+  const lines = profile.titleLines
+  const last = lines.length - 1
+
   return (
     <section className="panel relative overflow-hidden">
       <HeroBackdrop />
       <div className="relative">
-        {/* Full-width title, one deliberate line per entry; balance handles narrow screens. */}
-        <h1 className="font-heading text-[2.3rem] leading-[1.06] tracking-tight sm:text-[2.75rem] xl:text-[3.75rem]">
-          {profile.titleLines.map((line, i) => (
-            <span key={line} className={i === 1 ? 'block italic text-balance' : 'block text-balance'}>
-              {line}
-            </span>
-          ))}
-        </h1>
-
-        <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_1.05fr] xl:items-start xl:gap-10">
+        <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-center">
           <div>
-            <p className="max-w-xl text-lg leading-relaxed text-muted">
-              I build systems that organize leads, automate follow&#8209;up, and{' '}
-              <em className="text-signal-deep">simplify</em> business operations.
+            <p className="eyebrow flex items-center gap-2.5 text-muted">
+              <span className="h-2 w-2 rounded-full bg-signal shadow-[0_0_0_4px_rgb(255_90_31/0.18)]" />
+              {profile.heroEyebrow}
+            </p>
+
+            {/* One span per line so the breaks are deliberate; the last line is the accent. */}
+            <h1 className="mt-6 font-heading text-[2.6rem] leading-[1.02] tracking-tight sm:text-[3.25rem] xl:text-[clamp(2.75rem,4.2vw,4rem)]">
+              {lines.map((line, i) => (
+                <span key={line} className={i === last ? 'block italic text-signal-deep' : 'block'}>
+                  {line}
+                </span>
+              ))}
+            </h1>
+
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
+              I build systems that organize leads, automate follow&#8209;up, and simplify business
+              operations.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">

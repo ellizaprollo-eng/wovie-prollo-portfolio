@@ -17,6 +17,12 @@ export function ProofPoints() {
             {c}
           </span>
         ))}
+        <a
+          href="#certifications"
+          className="font-medium text-ink underline decoration-signal decoration-2 underline-offset-4"
+        >
+          View certificates
+        </a>
       </p>
     </section>
   )

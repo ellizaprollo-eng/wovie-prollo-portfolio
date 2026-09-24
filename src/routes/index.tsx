@@ -7,6 +7,7 @@ import { FeaturedWork } from '@/components/FeaturedWork'
 import { CaseStudies } from '@/components/CaseStudies'
 import { Services } from '@/components/Services'
 import { About } from '@/components/About'
+import { Certifications } from '@/components/Certifications'
 import { Testimonials } from '@/components/Testimonials'
 import { Booking } from '@/components/Booking'
 import { Footer } from '@/components/Footer'
@@ -34,6 +35,7 @@ function Home() {
             <CaseStudies />
             <Services />
             <About />
+            <Certifications />
             <Testimonials />
             <Booking />
           </main>

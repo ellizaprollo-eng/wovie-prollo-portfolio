@@ -9,8 +9,10 @@
 
 export const profile = {
   name: 'Wovie Prollo',
-  /** Hero title (H1), one entry per line. The second line is set in italic. */
-  titleLines: ['Certified GoHighLevel Expert', 'And AI Automation Builder.'],
+  /** Small label above the hero title. */
+  heroEyebrow: 'GoHighLevel & AI automation · US / EU / APAC hours',
+  /** Hero title (H1), one entry per line. The last line is the italic orange accent. */
+  titleLines: ['Certified GoHighLevel', 'Expert And', 'AI Automation Builder.'],
   positioning:
     'I build systems that organize leads, automate follow-up, and simplify business operations.',
   location: 'Manila, Philippines',
@@ -50,6 +52,7 @@ export const navLinks = [
   { label: 'Systems', href: '#systems' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Book a call', href: '#book' },
 ]
@@ -271,6 +274,49 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Publishing', src: '/projects/auto-article-wordpress.png' },
       { label: 'Payments', src: '/projects/payments-received-tracking-audit.png' },
     ],
+  },
+]
+
+/**
+ * Certifications, copied from wovieofficial.vercel.app. Images live in
+ * /public/certifications. `badge` renders uncropped; certificates are
+ * cropped to the certificate itself in the grid and shown in full on click.
+ */
+export const certifications = [
+  {
+    title: 'GHL CRM Expert',
+    issuer: 'GoHighLevel',
+    date: '',
+    image: '/certifications/ghl-crm-expert-badge.png',
+    badge: true,
+  },
+  {
+    title: 'n8n Quickstart',
+    issuer: 'n8n Academy',
+    date: 'July 5, 2026',
+    image: '/certifications/n8n-quickstart.png',
+    badge: false,
+  },
+  {
+    title: 'Essentials: Your First Workflows',
+    issuer: 'n8n Academy',
+    date: 'July 5, 2026',
+    image: '/certifications/n8n-essentials-first-workflows.png',
+    badge: false,
+  },
+  {
+    title: 'Integrations: APIs & Connected Workflows',
+    issuer: 'n8n Academy',
+    date: 'July 5, 2026',
+    image: '/certifications/n8n-integrations-apis.png',
+    badge: false,
+  },
+  {
+    title: 'In Practice: AI, Testing & Best Practices',
+    issuer: 'n8n Academy',
+    date: 'July 5, 2026',
+    image: '/certifications/n8n-ai-testing-best-practices.png',
+    badge: false,
   },
 ]
 
