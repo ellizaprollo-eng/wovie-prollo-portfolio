@@ -9,7 +9,7 @@
 
 export const profile = {
   name: 'Wovie Prollo',
-  headline: 'Workflow & AI Automation Specialist | GoHighLevel CRM Specialist',
+  headline: 'GoHighLevel Expert & AI Automation Builder',
   positioning:
     'I build systems that organize leads, automate follow-up, and simplify business operations.',
   intro:
