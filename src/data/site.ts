@@ -20,7 +20,7 @@ export const profile = {
   /** Short line under the name in the sidebar. */
   tagline: 'I build the CRM and follow-up systems that keep leads moving.',
   /** Status chip in the sidebar. Set to '' to hide it. */
-  status: 'Available for projects',
+  status: 'Available for work & projects',
   timezone: 'Manila GMT+8 · remote across time zones',
   responseTime: 'Usually responds within 24 hours',
   /** Profile photo. Replace the file in /public or point this at a new one. */
@@ -46,14 +46,6 @@ export const booking = {
   length: '30-minute',
 }
 
-export const contactForm = {
-  /**
-   * Optional form backend (Formspree, a GoHighLevel inbound webhook, etc.).
-   * When empty, the form opens the visitor's email app with the message
-   * pre-filled and addressed to links.email.
-   */
-  endpoint: '',
-}
 
 export const navLinks = [
   { label: 'Work', href: '#work' },
@@ -62,7 +54,6 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Book a call', href: '#book' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 /** Featured pair at the top of the work area. Sources: previous portfolio. */

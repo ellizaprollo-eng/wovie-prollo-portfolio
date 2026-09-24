@@ -9,7 +9,6 @@ All copy, links, and project data live in `src/data/site.ts`:
 - `profile.photo`: profile photo (file in `public/`)
 - `profile.heroVisual`: set to an image path to replace the built-in hero workflow diagram
 - `booking.url`: Calendly link used by the Book a Call embed
-- `contactForm.endpoint`: optional form backend (Formspree, GoHighLevel webhook). Empty means the form opens the visitor's email app.
 - `proofPoints`, `caseStudies`, `tools`: only add claims documented in `public/resume.pdf` or project materials.
 
 ## Running locally

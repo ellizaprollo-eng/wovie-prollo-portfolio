@@ -18,7 +18,7 @@ export function Sidebar() {
           <p className="text-lg font-semibold tracking-tight">{profile.name}</p>
           <p className="mt-1 text-sm leading-snug text-muted">{profile.tagline}</p>
           {profile.status && (
-            <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/[0.07] px-3 py-1 text-[0.68rem] font-medium tracking-[0.12em] text-ink uppercase">
+            <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/[0.07] px-3 py-1 text-[0.8rem] font-medium whitespace-nowrap text-ink">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" />
               {profile.status}
             </p>
