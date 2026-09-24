@@ -28,7 +28,7 @@ export function FeaturedWork() {
           </a>
           <div className="flex flex-1 flex-col p-6 md:p-7">
             <p className="eyebrow text-[0.7rem] text-signal-deep">Featured build</p>
-            <h2 className="mt-2 font-heading text-2xl leading-tight">{site.title}</h2>
+            <h2 className="mt-2 font-heading text-3xl leading-tight">{site.title}</h2>
             <p className="mt-2 leading-relaxed text-muted">{site.description}</p>
             <a
               href={site.url}
@@ -53,7 +53,7 @@ export function FeaturedWork() {
           </a>
           <div className="flex flex-1 flex-col p-6 md:p-7">
             <p className="eyebrow text-[0.7rem] text-signal-deep">{workflow.eyebrow}</p>
-            <h2 className="mt-2 font-heading text-2xl leading-tight">{workflow.title}</h2>
+            <h2 className="mt-2 font-heading text-3xl leading-tight">{workflow.title}</h2>
             <p className="mt-2 leading-relaxed text-muted">{workflow.description}</p>
             <a
               href="#systems"
@@ -70,7 +70,7 @@ export function FeaturedWork() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="eyebrow text-[0.7rem] text-muted">Websites and funnels</p>
-            <h2 className="mt-2 font-heading text-2xl leading-tight md:text-[2rem]">Live client sites.</h2>
+            <h2 className="mt-2 font-heading text-3xl leading-tight md:text-4xl">Live client sites.</h2>
           </div>
           <p className="text-sm text-muted">Each one opens in a new tab.</p>
         </div>

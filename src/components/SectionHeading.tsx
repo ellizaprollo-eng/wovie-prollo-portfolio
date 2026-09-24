@@ -19,7 +19,7 @@ export function SectionHeading({
       </p>
       <h2
         className={cn(
-          'mt-3 font-heading text-[1.65rem] leading-[1.15] tracking-tight md:text-[2.15rem]',
+          'mt-3 font-heading text-[2rem] leading-[1.08] tracking-tight md:text-[2.6rem]',
           dark ? 'text-white' : 'text-ink',
         )}
       >

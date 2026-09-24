@@ -10,7 +10,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur lg:hidden">
       <nav className="container-x flex h-16 items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="grid h-7 w-7 place-items-center rounded-md bg-navy font-heading text-base leading-none text-white">
+          <span className="grid h-7 w-7 place-items-center rounded-md bg-navy font-heading text-lg leading-none text-white">
             W
           </span>
           <span className="text-[0.95rem] font-medium tracking-tight">{profile.name}</span>

@@ -10,7 +10,7 @@ export function Hero() {
       <div className="relative">
         <div className="grid gap-8 xl:grid-cols-[1.1fr_1fr] xl:items-center xl:gap-10">
           <div>
-            <h1 className="max-w-3xl font-heading text-[2rem] leading-[1.12] tracking-tight sm:text-[2.6rem] xl:text-[2.85rem]">
+            <h1 className="max-w-3xl font-heading text-[2.4rem] leading-[1.04] tracking-tight sm:text-5xl xl:text-[3.5rem]">
               {profile.title}
             </h1>
             <p className="mt-5 max-w-2xl text-xl leading-snug font-medium text-ink/90 md:text-[1.4rem]">

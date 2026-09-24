@@ -55,7 +55,7 @@ function VideoTestimonial() {
             </span>
             <span className="relative p-5">
               <span className="eyebrow block text-[0.65rem] text-white/70">Video testimonial</span>
-              <span className="mt-1 block font-heading text-lg text-white">{name}</span>
+              <span className="mt-1 block font-heading text-2xl leading-tight text-white">{name}</span>
               {title && <span className="block text-sm text-white/75">{title}</span>}
             </span>
           </button>
@@ -76,13 +76,13 @@ export function Testimonials() {
             <li key={t.name}>
               <figure className="flex h-full flex-col rounded-xl border border-line bg-paper p-5 md:p-6">
                 <blockquote className="leading-relaxed text-ink/85">
-                  <span aria-hidden="true" className="mr-1 font-heading text-signal">
+                  <span aria-hidden="true" className="mr-1 font-heading text-xl leading-none text-signal">
                     “
                   </span>
                   {t.quote}
                 </blockquote>
                 <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-navy font-heading text-xs text-white">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-navy text-xs font-medium text-white">
                     {initials(t.name)}
                   </span>
                   <span>
