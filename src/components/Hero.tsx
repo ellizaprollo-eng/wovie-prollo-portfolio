@@ -12,17 +12,21 @@ export function Hero() {
       <HeroBackdrop />
       <div className="relative">
         <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] xl:items-center">
-          <div>
+          <div className="@container min-w-0">
             <p className="flex items-center gap-2.5 font-mono text-[0.78rem] tracking-[0.1em] text-muted uppercase">
               <span className="h-2 w-2 rounded-full bg-signal shadow-[0_0_0_4px_rgb(255_90_31/0.18)]" />
               {profile.heroEyebrow}
             </p>
 
             {/* One span per line so the breaks are deliberate; the last line is the accent. */}
-            {/* Size scales with the viewport so the widest line ("AI Automation Builder.") never wraps. */}
-            <h1 className="mt-6 font-heading text-[clamp(1.9rem,9.6vw,3.75rem)] leading-[1.02] tracking-tight xl:text-[clamp(2.75rem,4.2vw,4rem)]">
+            {/* Exactly one line per entry: lines never wrap, and the size is tied to the
+                text column's width (cqi) so the widest line always fits. */}
+            <h1 className="mt-6 font-heading text-[clamp(1.75rem,12cqi,4rem)] leading-[1.02] tracking-tight">
               {lines.map((line, i) => (
-                <span key={line} className={i === last ? 'block italic text-signal-deep' : 'block'}>
+                <span
+                  key={line}
+                  className={i === last ? 'block italic whitespace-nowrap text-signal-deep' : 'block whitespace-nowrap'}
+                >
                   {line}
                 </span>
               ))}
