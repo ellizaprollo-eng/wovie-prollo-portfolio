@@ -1,5 +1,5 @@
 import { links, navLinks, profile } from '@/data/site'
-import { LinkedInIcon, MailIcon } from './Icons'
+import { MailIcon, WhatsAppIcon } from './Icons'
 import { ThemeToggle } from './ThemeToggle'
 
 /** Sticky profile card. On small screens it sits above the content, without the nav list. */
@@ -45,22 +45,17 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:mt-6 lg:grid-cols-1">
-        <a href="#book" className="btn btn-primary w-full">
+        <a href="#book" className="btn btn-primary w-full sm:col-span-2 lg:col-span-1">
           <span className="btn-node" />
           Book a Call
+        </a>
+        <a href={links.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-ghost w-full px-3 whitespace-nowrap">
+          <WhatsAppIcon className="h-4 w-4" />
+          Message on WhatsApp
         </a>
         <a href={`mailto:${links.email}`} className="btn btn-ghost w-full">
           <MailIcon className="h-4 w-4" />
           Send me an email
-        </a>
-        <a
-          href={links.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-ghost w-full sm:col-span-2 lg:col-span-1"
-        >
-          <LinkedInIcon className="h-4 w-4" />
-          LinkedIn
         </a>
       </div>
 
