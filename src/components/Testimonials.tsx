@@ -1,4 +1,4 @@
-import { testimonials } from '@/data/site'
+import { testimonials, videoTestimonial } from '@/data/site'
 import { SectionHeading } from './SectionHeading'
 
 function initials(name: string) {
@@ -9,31 +9,67 @@ function initials(name: string) {
     .slice(0, 2)
 }
 
+function VideoTestimonial() {
+  const { driveId, name, title } = videoTestimonial
+  if (!driveId) return null
+
+  return (
+    <figure className="mx-auto w-full max-w-[20rem] xl:mx-0 xl:max-w-none">
+      <div className="overflow-hidden rounded-xl border border-line bg-navy">
+        <iframe
+          src={`https://drive.google.com/file/d/${driveId}/preview`}
+          title={name ? `Video testimonial from ${name}` : 'Client video testimonial'}
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          loading="lazy"
+          className="block aspect-[9/16] w-full"
+        />
+      </div>
+      <figcaption className="mt-3 flex items-center gap-2 text-sm">
+        <span className="h-1.5 w-1.5 rounded-full bg-signal" />
+        {name ? (
+          <span>
+            <span className="font-medium">{name}</span>
+            {title && <span className="text-muted"> · {title}</span>}
+          </span>
+        ) : (
+          <span className="text-muted">Client video testimonial</span>
+        )}
+      </figcaption>
+    </figure>
+  )
+}
+
 export function Testimonials() {
   return (
     <section id="testimonials" className="panel">
       <SectionHeading eyebrow="Client testimonials" title="What clients say." />
-      <ul className="mt-8 grid gap-4 xl:grid-cols-3">
-        {testimonials.map((t) => (
-          <li key={t.name}>
-            <figure className="flex h-full flex-col rounded-xl border border-line bg-paper p-6">
-              <span aria-hidden="true" className="font-heading text-4xl leading-none text-signal">
-                “
-              </span>
-              <blockquote className="mt-2 flex-1 leading-relaxed text-ink/85">{t.quote}</blockquote>
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy font-heading text-sm text-white">
-                  {initials(t.name)}
-                </span>
-                <span>
-                  <span className="block font-medium">{t.name}</span>
-                  <span className="block text-sm text-muted">{t.title}</span>
-                </span>
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-8 grid gap-6 xl:grid-cols-[18rem_minmax(0,1fr)] xl:items-start">
+        <VideoTestimonial />
+        <ul className="grid gap-4">
+          {testimonials.map((t) => (
+            <li key={t.name}>
+              <figure className="flex h-full flex-col rounded-xl border border-line bg-paper p-5 md:p-6">
+                <blockquote className="leading-relaxed text-ink/85">
+                  <span aria-hidden="true" className="mr-1 font-heading text-signal">
+                    “
+                  </span>
+                  {t.quote}
+                </blockquote>
+                <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-navy font-heading text-xs text-white">
+                    {initials(t.name)}
+                  </span>
+                  <span>
+                    <span className="block font-medium">{t.name}</span>
+                    <span className="block text-sm text-muted">{t.title}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

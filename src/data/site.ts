@@ -309,6 +309,17 @@ export const testimonials = [
   },
 ]
 
+/**
+ * Video testimonial hosted on Google Drive (file must stay shared as
+ * "Anyone with the link"). The id is the part between /d/ and /view in the
+ * share link. Fill in name and title to show who is speaking.
+ */
+export const videoTestimonial = {
+  driveId: '1PRvSf94JoMDaCYZJ9bh4qju1lCoXSxcR',
+  name: '',
+  title: '',
+}
+
 /** Sources: resume Technical Skills and Experience sections. */
 export const tools = [
   'GoHighLevel',
