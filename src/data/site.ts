@@ -16,6 +16,12 @@ export const profile = {
     'I set up CRMs, connect the tools a business already uses, and build the workflows and AI agents that handle the repetitive work in between.',
   location: 'Manila, Philippines',
   availability: 'Remote, working across time zones',
+  /** Short line under the name in the sidebar. */
+  tagline: 'I build the CRM and follow-up systems that keep leads moving.',
+  /** Status chip in the sidebar. Set to '' to hide it. */
+  status: 'Available for projects',
+  timezone: 'Manila GMT+8 · remote across time zones',
+  responseTime: 'Usually responds within 24 hours',
   /** Profile photo. Replace the file in /public or point this at a new one. */
   photo: '/profile.jpg',
   /**
@@ -49,11 +55,42 @@ export const contactForm = {
 }
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
-  { label: 'Tools', href: '#tools' },
+  { label: 'Systems', href: '#systems' },
+  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about' },
+  { label: 'Book a call', href: '#book' },
   { label: 'Contact', href: '#contact' },
+]
+
+/** Featured pair at the top of the work area. Sources: previous portfolio. */
+export const featured = {
+  site: {
+    label: 'Membership site · GoHighLevel',
+    title: 'Your Power Suite',
+    description:
+      'Membership site for a national community of women in real estate and mortgage, with webinar and seminar sign-ups.',
+    image: '/projects/websites/yourpowersuite.jpg',
+    url: 'https://yourpowersuite.com/',
+  },
+  workflow: {
+    label: 'One workflow',
+    eyebrow: 'Under the hood',
+    title: 'This is one automation.',
+    description:
+      'Every form submission gets tagged, an opportunity, email and SMS, then an AI voice call, and is routed by outcome: booked, engaged, or no answer.',
+    image: '/projects/form-submission-lead.png',
+  },
+}
+
+/** Live client sites. Source: previous portfolio's website projects. */
+export const websites = [
+  { name: 'Your Power Suite', note: 'Membership community', image: '/projects/websites/yourpowersuite.jpg', url: 'https://yourpowersuite.com/' },
+  { name: 'The Row House', note: 'Fitness studio', image: '/projects/websites/therowhouse.jpg', url: 'https://www.therowhouse.com/' },
+  { name: 'LeadKast', note: 'Business advisory', image: '/projects/websites/leadkast.jpg', url: 'https://leadkast.com/' },
+  { name: 'The Disc Doctor', note: 'Local chiropractic', image: '/projects/websites/thediscdoctor.jpg', url: 'https://site.thediscdoctor.com/' },
+  { name: 'AI Pro Partner', note: 'AI systems partner', image: '/projects/websites/aipropartner.jpg', url: 'https://aipropartner.com/home' },
+  { name: 'Disruptors Media', note: 'Fractional CAIO and CMO', image: '/projects/websites/disruptorsmedia.jpg', url: 'https://disruptorsmedia.com/' },
 ]
 
 /** Sources: resume summary and experience section; certificate images in the old portfolio. */

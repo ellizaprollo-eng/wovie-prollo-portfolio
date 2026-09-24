@@ -2,8 +2,8 @@ import { links, navLinks, profile } from '@/data/site'
 
 export function Footer() {
   return (
-    <footer className="border-t border-line">
-      <div className="container-x flex flex-col gap-6 py-10 text-sm text-muted md:flex-row md:items-center md:justify-between">
+    <footer className="mt-4">
+      <div className="flex flex-col gap-6 px-2 py-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} {profile.name} · {profile.location}
         </p>

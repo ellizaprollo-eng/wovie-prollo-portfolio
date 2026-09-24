@@ -6,7 +6,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur lg:hidden">
       <nav className="container-x flex h-16 items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="grid h-7 w-7 place-items-center rounded-md bg-ink font-serif text-lg leading-none text-paper">
@@ -15,7 +15,7 @@ export function Navbar() {
           <span className="text-[0.95rem] font-medium tracking-tight">{profile.name}</span>
         </a>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-6 md:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="text-sm text-muted transition-colors hover:text-ink">

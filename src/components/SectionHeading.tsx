@@ -19,14 +19,14 @@ export function SectionHeading({
       </p>
       <h2
         className={cn(
-          'mt-4 font-serif text-4xl leading-[1.08] tracking-tight md:text-5xl',
+          'mt-3 font-serif text-[2rem] leading-[1.08] tracking-tight md:text-[2.6rem]',
           dark ? 'text-white' : 'text-ink',
         )}
       >
         {title}
       </h2>
       {intro && (
-        <p className={cn('mt-4 text-lg leading-relaxed', dark ? 'text-mist' : 'text-muted')}>{intro}</p>
+        <p className={cn('mt-3 text-[1.05rem] leading-relaxed', dark ? 'text-mist' : 'text-muted')}>{intro}</p>
       )}
     </div>
   )

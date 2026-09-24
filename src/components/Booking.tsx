@@ -25,8 +25,8 @@ export function Booking() {
   }, [hasLink])
 
   return (
-    <section id="book" className="container-x py-20 md:py-28">
-      <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+    <section id="book" className="panel">
+      <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-10">
         <div>
           <SectionHeading
             eyebrow="Book a call"

@@ -26,7 +26,7 @@ export function HeroBackdrop() {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      className="pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
       viewBox="0 0 1240 520"
       preserveAspectRatio="xMidYMid slice"
     >
@@ -78,16 +78,16 @@ export function FlowDivider({ dark = false }: { dark?: boolean }) {
  */
 export function FlowDiagram({ lanes, dark = false }: { lanes: string[][]; dark?: boolean }) {
   return (
-    <div className="space-y-4">
+    <div className="@container space-y-4">
       {lanes.map((steps, li) => (
-        <ol key={li} className="flex flex-col gap-0 sm:flex-row sm:items-center">
+        <ol key={li} className="flex flex-col gap-0 @lg:flex-row @lg:items-center">
           {steps.map((step, i) => {
             const last = i === steps.length - 1
             return (
-              <li key={step} className="flex flex-col sm:flex-1 sm:flex-row sm:items-center">
+              <li key={step} className="flex flex-col @lg:flex-1 @lg:flex-row @lg:items-center">
                 <span
                   className={cn(
-                    'flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-[0.8rem] leading-tight whitespace-nowrap sm:whitespace-normal',
+                    'flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-[0.8rem] leading-tight whitespace-nowrap @lg:whitespace-normal',
                     dark
                       ? 'border-white/15 bg-white/[0.04] text-mist'
                       : 'border-line bg-card text-ink',
@@ -106,7 +106,7 @@ export function FlowDiagram({ lanes, dark = false }: { lanes: string[][]; dark?:
                   <span
                     aria-hidden="true"
                     className={cn(
-                      'ml-[0.95rem] h-3 w-px sm:ml-0 sm:h-px sm:w-auto sm:min-w-3 sm:flex-1',
+                      'ml-[0.95rem] h-3 w-px @lg:ml-0 @lg:h-px @lg:w-auto @lg:min-w-3 @lg:flex-1',
                       dark ? 'bg-white/20' : 'bg-ink/20',
                     )}
                   />

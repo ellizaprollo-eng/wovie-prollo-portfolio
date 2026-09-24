@@ -3,8 +3,8 @@ import { SectionHeading } from './SectionHeading'
 
 export function About() {
   return (
-    <section id="about" className="container-x py-20 md:py-28">
-      <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
+    <section id="about" className="panel">
+      <div className="grid gap-12 xl:grid-cols-[1.25fr_0.75fr] xl:gap-12">
         <div>
           <SectionHeading eyebrow="About" title="Reliable systems behind everyday business work." />
           <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-muted">
@@ -21,14 +21,14 @@ export function About() {
           </ul>
         </div>
 
-        <div className="self-start rounded-xl border border-line bg-card p-6">
+        <div className="self-start rounded-xl border border-line bg-paper p-6">
           <h3 className="eyebrow text-muted">Experience</h3>
           <ol className="relative mt-5 space-y-6 border-l border-line pl-5">
             {about.experience.map((e, i) => (
               <li key={e.role} className="relative">
                 <span
                   className={`absolute top-1.5 -left-[1.36rem] h-2 w-2 rounded-full ${
-                    i === 0 ? 'bg-signal' : 'border border-ink/30 bg-card'
+                    i === 0 ? 'bg-signal' : 'border border-ink/30 bg-paper'
                   }`}
                 />
                 <p className="font-medium leading-snug">{e.role}</p>

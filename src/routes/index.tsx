@@ -1,37 +1,45 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Navbar } from '@/components/Navbar'
+import { Sidebar } from '@/components/Sidebar'
 import { Hero } from '@/components/Hero'
 import { ProofPoints } from '@/components/ProofPoints'
-import { About } from '@/components/About'
-import { Services } from '@/components/Services'
+import { FeaturedWork } from '@/components/FeaturedWork'
 import { CaseStudies } from '@/components/CaseStudies'
-import { Tools } from '@/components/Tools'
+import { Services } from '@/components/Services'
+import { About } from '@/components/About'
 import { Booking } from '@/components/Booking'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
-import { FlowDivider } from '@/components/Motif'
 
 export const Route = createFileRoute('/')({
   component: Home,
 })
 
+/**
+ * Layout: a sticky profile sidebar on the left, a column of cards on the
+ * right. Below the lg breakpoint the sidebar becomes a profile card at the
+ * top and the compact Navbar takes over navigation.
+ */
 function Home() {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <ProofPoints />
-        <About />
-        <FlowDivider />
-        <Services />
-        <CaseStudies />
-        <Tools />
-        <Booking />
-        <FlowDivider />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="mx-auto w-full max-w-[84rem] px-3 py-3 sm:px-4 sm:py-4 lg:px-6 lg:py-6">
+        <div className="grid gap-3 sm:gap-4 lg:grid-cols-[17rem_minmax(0,1fr)] lg:items-start">
+          <Sidebar />
+          <main id="top" className="grid min-w-0 gap-3 sm:gap-4">
+            <Hero />
+            <ProofPoints />
+            <FeaturedWork />
+            <CaseStudies />
+            <Services />
+            <About />
+            <Booking />
+            <Contact />
+          </main>
+        </div>
+        <Footer />
+      </div>
     </>
   )
 }

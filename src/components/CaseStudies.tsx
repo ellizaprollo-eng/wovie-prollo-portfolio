@@ -5,15 +5,17 @@ import { SectionHeading } from './SectionHeading'
 
 export function CaseStudies() {
   return (
-    <section id="work" className="bg-ink py-20 text-mist md:py-28">
-      <div className="container-x">
+    <section id="systems" className="rounded-[1.25rem] bg-ink p-4 text-mist sm:p-6 md:p-9">
+      <div className="px-2 pt-2 sm:px-0 sm:pt-0">
         <SectionHeading
           dark
-          eyebrow="Selected projects"
+          eyebrow="Selected systems"
           title="Problem, system, result."
           intro="Six systems from my portfolio. Each one replaced a manual step with a workflow that runs on its own."
         />
-        <div className="mt-14 grid gap-5 lg:grid-cols-2">
+      </div>
+      <div>
+        <div className="mt-8 grid gap-4 xl:grid-cols-2">
           {caseStudies.map((c, i) => (
             <Reveal key={c.title} as="article" delay={(i % 2) * 80}>
               <CaseCard study={c} />
@@ -32,7 +34,20 @@ function CaseCard({ study }: { study: CaseStudy }) {
     { label: 'Result', text: study.result },
   ]
   return (
-    <div className="flex h-full flex-col rounded-xl border border-white/10 bg-ink-2 p-6 md:p-7">
+    <div className="flex h-full flex-col rounded-xl border border-white/10 bg-ink-2 p-5 md:p-7">
+      <a
+        href={study.screenshots[0].src}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative -mx-5 -mt-5 mb-6 block overflow-hidden rounded-t-xl border-b border-white/10 bg-white md:-mx-7 md:-mt-7"
+      >
+        <img
+          src={study.screenshots[0].src}
+          alt={`${study.title} workflow screenshot`}
+          loading="lazy"
+          className="aspect-[16/8] w-full object-cover object-top opacity-95"
+        />
+      </a>
       <h3 className="font-serif text-2xl leading-tight text-white md:text-[1.75rem]">{study.title}</h3>
       <p className="mt-2 text-xs tracking-wide text-mist-dim">{study.tools.join(' · ')}</p>
 

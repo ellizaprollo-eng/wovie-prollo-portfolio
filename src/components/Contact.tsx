@@ -38,8 +38,8 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="container-x py-20 md:py-28">
-      <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+    <section id="contact" className="panel">
+      <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-10">
         <div>
           <SectionHeading
             eyebrow="Contact"
@@ -67,7 +67,7 @@ export function Contact() {
           </ul>
         </div>
 
-        <form onSubmit={onSubmit} className="grid gap-5 rounded-xl border border-line bg-card p-6 md:p-8 sm:grid-cols-2">
+        <form onSubmit={onSubmit} className="grid gap-5 rounded-xl border border-line bg-paper p-5 md:p-7 sm:grid-cols-2">
           <label className="grid gap-2 text-sm font-medium">
             Name
             <input name="name" required autoComplete="name" className="field font-normal" placeholder="Your name" />
