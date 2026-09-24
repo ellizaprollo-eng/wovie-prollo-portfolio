@@ -10,12 +10,14 @@ export function Hero() {
       <div className="relative">
         <div className="grid gap-8 xl:grid-cols-[1.1fr_1fr] xl:items-center xl:gap-10">
           <div>
-            <p className="eyebrow text-muted">{profile.headline}</p>
-            <h1 className="mt-5 max-w-3xl font-heading text-[2rem] leading-[1.12] tracking-tight sm:text-[2.6rem] xl:text-[2.85rem]">
+            <h1 className="max-w-3xl font-heading text-[2rem] leading-[1.12] tracking-tight sm:text-[2.6rem] xl:text-[2.85rem]">
+              {profile.title}
+            </h1>
+            <p className="mt-5 max-w-2xl text-xl leading-snug font-medium text-ink/90 md:text-[1.4rem]">
               I build systems that organize leads, automate follow&#8209;up, and{' '}
               <em className="text-signal-deep">simplify</em> business operations.
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
+            </p>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href="#book" className="btn btn-primary">

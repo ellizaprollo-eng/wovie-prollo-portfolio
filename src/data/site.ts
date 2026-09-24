@@ -9,7 +9,8 @@
 
 export const profile = {
   name: 'Wovie Prollo',
-  headline: 'GoHighLevel Expert & AI Automation Builder',
+  /** Hero title (H1). */
+  title: 'Certified GoHighLevel Expert And AI Automation Builder.',
   positioning:
     'I build systems that organize leads, automate follow-up, and simplify business operations.',
   intro:
@@ -297,12 +298,6 @@ export const testimonials = [
   },
   {
     quote:
-      'Working with Wovie on our property management automation was a game-changer. He set up seamless integrations that handle everything from guest communication to scheduling. Highly recommend!',
-    name: 'John Pancerzewski',
-    title: 'Property Manager',
-  },
-  {
-    quote:
       "Wovie's attention to detail and deep understanding of automation tools is impressive. He created custom workflows that perfectly fit our business needs. Professional and results-driven.",
     name: 'Trey Pinkerman',
     title: 'Funding Business Owner',
@@ -310,14 +305,14 @@ export const testimonials = [
 ]
 
 /**
- * Video testimonial hosted on Google Drive (file must stay shared as
- * "Anyone with the link"). The id is the part between /d/ and /view in the
- * share link. Fill in name and title to show who is speaking.
+ * Video testimonial, self-hosted in /public/testimonials (downloaded from the
+ * client's Google Drive share). Set src to '' to hide it.
  */
 export const videoTestimonial = {
-  driveId: '1PRvSf94JoMDaCYZJ9bh4qju1lCoXSxcR',
-  name: '',
-  title: '',
+  src: '/testimonials/john-pancerzewski.mp4',
+  poster: '/testimonials/john-pancerzewski-poster.jpg',
+  name: 'John Pancerzewski',
+  title: 'Property Manager',
 }
 
 /** Sources: resume Technical Skills and Experience sections. */

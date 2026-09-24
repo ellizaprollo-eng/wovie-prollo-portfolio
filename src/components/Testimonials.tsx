@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { testimonials, videoTestimonial } from '@/data/site'
 import { SectionHeading } from './SectionHeading'
 
@@ -9,33 +10,57 @@ function initials(name: string) {
     .slice(0, 2)
 }
 
+/**
+ * Self-hosted video with a poster overlay (play button + name). Native
+ * controls appear once playback starts; the overlay returns when it ends.
+ */
 function VideoTestimonial() {
-  const { driveId, name, title } = videoTestimonial
-  if (!driveId) return null
+  const { src, poster, name, title } = videoTestimonial
+  const ref = useRef<HTMLVideoElement>(null)
+  const [started, setStarted] = useState(false)
+  if (!src) return null
+
+  function play() {
+    setStarted(true)
+    ref.current?.play().catch(() => {})
+  }
 
   return (
     <figure className="mx-auto w-full max-w-[20rem] xl:mx-0 xl:max-w-none">
-      <div className="overflow-hidden rounded-xl border border-line bg-navy">
-        <iframe
-          src={`https://drive.google.com/file/d/${driveId}/preview`}
-          title={name ? `Video testimonial from ${name}` : 'Client video testimonial'}
-          allow="autoplay; fullscreen"
-          allowFullScreen
-          loading="lazy"
-          className="block aspect-[9/16] w-full"
+      <div className="relative overflow-hidden rounded-2xl bg-navy shadow-[0_20px_40px_-24px_rgb(20_26_38/0.45)]">
+        <video
+          ref={ref}
+          src={src}
+          poster={poster}
+          controls={started}
+          playsInline
+          preload="metadata"
+          onEnded={() => setStarted(false)}
+          aria-label={`Video testimonial from ${name}`}
+          className="block aspect-[9/16] w-full object-cover"
         />
-      </div>
-      <figcaption className="mt-3 flex items-center gap-2 text-sm">
-        <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-        {name ? (
-          <span>
-            <span className="font-medium">{name}</span>
-            {title && <span className="text-muted"> · {title}</span>}
-          </span>
-        ) : (
-          <span className="text-muted">Client video testimonial</span>
+
+        {!started && (
+          <button
+            type="button"
+            onClick={play}
+            aria-label={`Play video testimonial from ${name}`}
+            className="group absolute inset-0 flex flex-col justify-end text-left"
+          >
+            <span className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/10 to-transparent" />
+            <span className="absolute top-1/2 left-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-signal text-[#141a26] shadow-lg transition-transform duration-200 group-hover:scale-105">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-6 w-6">
+                <path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5Z" />
+              </svg>
+            </span>
+            <span className="relative p-5">
+              <span className="eyebrow block text-[0.65rem] text-white/70">Video testimonial</span>
+              <span className="mt-1 block font-heading text-lg text-white">{name}</span>
+              {title && <span className="block text-sm text-white/75">{title}</span>}
+            </span>
+          </button>
         )}
-      </figcaption>
+      </div>
     </figure>
   )
 }
