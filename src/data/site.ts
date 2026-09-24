@@ -9,12 +9,10 @@
 
 export const profile = {
   name: 'Wovie Prollo',
-  /** Hero title (H1). */
-  title: 'Certified GoHighLevel Expert And AI Automation Builder.',
+  /** Hero title (H1), one entry per line. The second line is set in italic. */
+  titleLines: ['Certified GoHighLevel Expert', 'And AI Automation Builder.'],
   positioning:
     'I build systems that organize leads, automate follow-up, and simplify business operations.',
-  intro:
-    'I set up CRMs, connect the tools a business already uses, and build the workflows and AI agents that handle the repetitive work in between.',
   location: 'Manila, Philippines',
   availability: 'Remote, working across time zones',
   /** Short line under the name in the sidebar. */

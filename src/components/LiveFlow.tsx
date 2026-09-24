@@ -24,7 +24,7 @@ export function LiveFlow() {
   return (
     <figure
       aria-label="Example workflow: a new lead is qualified by an AI agent, gets an instant reply, and is booked on the calendar"
-      className="m-0 rounded-[1.1rem] border border-white/10 bg-navy p-4 sm:p-5"
+      className="m-0 w-full max-w-xl rounded-[1.1rem] border border-white/10 bg-navy p-4 sm:p-5 xl:max-w-none"
     >
       <figcaption className="flex justify-between font-mono text-[0.7rem] tracking-[0.08em] text-mist-dim uppercase">
         <span>Workflow · Lead → Booked</span>
