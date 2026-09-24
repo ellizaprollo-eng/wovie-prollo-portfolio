@@ -87,24 +87,18 @@ export const websites = [
   { name: 'Disruptors Media', note: 'Fractional CAIO and CMO', image: '/projects/websites/disruptorsmedia.jpg', url: 'https://disruptorsmedia.com/' },
 ]
 
-/** Sources: resume summary and experience section; certificate images in the old portfolio. */
+/**
+ * Years of experience: resume summary. The other counts come from the
+ * previous portfolio's "By the Numbers", counted from its
+ * project list: 22 workflows, 8 AI/voice agents, 6 websites and funnels,
+ * 6 industries. Credentials come from the certificate images.
+ */
 export const proofPoints = [
-  {
-    value: '4 years',
-    label: 'Designing and building automations on GoHighLevel, Zapier, Make, and n8n',
-  },
-  {
-    value: '~80%',
-    label: 'Less manual process time, reported across freelance and property-management work',
-  },
-  {
-    value: '22',
-    label: 'Documented workflows and AI agents in my project portfolio',
-  },
-  {
-    value: '6',
-    label: 'Live websites and funnels built for clients',
-  },
+  { value: '4', label: 'Years of experience' },
+  { value: '22', label: 'Workflows shipped' },
+  { value: '8', label: 'AI agents in production' },
+  { value: '6', label: 'Funnels & landing pages' },
+  { value: '6', label: 'Industries served' },
 ]
 
 export const credentials = [
