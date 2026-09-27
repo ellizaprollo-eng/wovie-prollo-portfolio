@@ -99,6 +99,10 @@
   .cert strong { font-weight: 500; }
   .cert span { display: block; font: 400 7pt var(--mono); color: var(--muted); }
 
+  .quote { border-left: 2px solid var(--signal); padding: 1px 0 1px 10px; font: 400 10.4pt/1.3 var(--serif); }
+  .quote cite { display: block; margin-top: 5px; font: 400 7pt var(--mono); font-style: normal; color: var(--muted); }
+  .sys p b { font-weight: 600; }
+
   footer { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font: 400 7.2pt var(--mono); color: var(--muted); }
   footer b { color: var(--ink); font-weight: 500; }
 </style>
@@ -122,8 +126,8 @@
   <div class="divider"><i></i><span></span><i class="on"></i><span></span><i></i></div>
 
   <p class="lede">
-    I build systems that organize leads, automate follow-up, and simplify business operations.
-    <span class="muted">4 years designing and building automations on GoHighLevel, Zapier, Make, and n8n, connecting the tools a business already uses so the work happens without anyone chasing it.</span>
+    Most businesses I work with already have the tools. What they are missing is the system that connects them, so no lead waits and nobody has to remember the next step.
+    <span class="muted">4 years building that system in GoHighLevel, n8n, Make, and Zapier for real estate, property management, fitness, chiropractic, advisory, and media businesses.</span>
   </p>
 
   <div class="proof">
@@ -142,9 +146,9 @@
           <div class="role-head"><strong>Workflow Automation Specialist</strong><span>Current</span></div>
           <p class="org">Freelance · Upwork and OnlineJobs.ph</p>
           <ul class="b">
-            <li>Designed and implemented n8n and Zapier automation workflows, reducing manual processes by about 80%.</li>
-            <li>Built AI chat and voice agents (OpenAI, Retell AI) for lead qualification, appointment booking, and inbound calls.</li>
-            <li>Set up lead sourcing and enrichment pipelines with Apollo and Apify, and automated publishing to WordPress.</li>
+            <li>Cut manual processing by about 80% by moving client handoffs into n8n and Zapier workflows.</li>
+            <li>Put 8 AI agents into production, including a Retell AI voice agent that checks the real calendar and books the appointment during the call.</li>
+            <li>Built Your Power Suite, a GoHighLevel membership site for a national community of women in real estate and mortgage.</li>
           </ul>
         </div>
         <div class="role">
@@ -169,34 +173,27 @@
         <h2>Selected systems</h2>
         <div class="sys">
           <div class="sys-head"><strong>Lead Routing and CRM Intake</strong><span>GoHighLevel · Webhook · Voice AI</span></div>
-          <p>Every form submission is tagged, gets an opportunity, email, SMS, and an AI voice call, then is routed by outcome. <em>Every lead is contacted right away.</em></p>
+          <p><b>Before:</b> form leads sat in a shared inbox until someone noticed. <em>Now: each one is tagged, emailed, texted, and called by an AI voice agent, then routed by outcome.</em></p>
         </div>
         <div class="sys">
           <div class="sys-head"><strong>AI Chat Agent</strong><span>n8n · OpenAI · Vector store</span></div>
-          <p>Classifies each incoming message and routes it to an instant reply, the booking flow, or a flagged escalation. <em>Only messages that need a person reach one.</em></p>
+          <p><b>Before:</b> a person read every chat to sort routine questions, bookings, and urgent issues. <em>Now: an agent classifies and replies instantly, and only real issues reach a person.</em></p>
         </div>
         <div class="sys">
-          <div class="sys-head"><strong>Voice AI Booking and Call Flows</strong><span>Retell AI · n8n</span></div>
-          <p>Voice agents greet and qualify callers; an n8n backend checks real calendar availability and confirms the slot during the call.</p>
+          <div class="sys-head"><strong>Voice AI Booking</strong><span>Retell AI · n8n</span></div>
+          <p><b>Before:</b> booking a call meant someone checking the calendar live. <em>Now: the voice agent qualifies the caller and confirms a real slot during the call.</em></p>
         </div>
         <div class="sys">
           <div class="sys-head"><strong>Lead Enrichment Engine</strong><span>n8n · Apollo · Apify</span></div>
-          <p>Turns a plain-language request into an Apollo search, scrapes results with Apify, and scores each lead before outreach.</p>
+          <p><b>Before:</b> Apollo searches, exports, and lead scoring done by hand. <em>Now: one plain-language request returns scored leads with email and website, ready for outreach.</em></p>
         </div>
       </section>
     </div>
 
     <aside class="side">
       <section>
-        <h2>Services</h2>
-        <ol class="svc">
-          <li>CRM Architecture and GoHighLevel Setup</li>
-          <li>Workflow Automation</li>
-          <li>AI Voice and Chat Agents</li>
-          <li>Funnels and Websites</li>
-          <li>API and Webhook Integrations</li>
-          <li>Reporting and Workflow Optimization</li>
-        </ol>
+        <h2>What clients say</h2>
+        <blockquote class="quote">&ldquo;He created custom workflows that perfectly fit our business needs. Professional and results-driven.&rdquo;<cite>Trey Pinkerman · Funding Business Owner</cite></blockquote>
       </section>
 
       <section>
@@ -230,7 +227,7 @@
   </div>
 
   <footer>
-    <span>Case studies, workflow screenshots, and client testimonials</span>
+    <span>Live client sites, workflow screenshots, and a video testimonial</span>
     <a href="https://wovie-certified.vercel.app/"><b>wovie-certified.vercel.app</b></a>
   </footer>
 </body>
